@@ -7,12 +7,12 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @post.image %>
+  <%= image_tag @post.image.url %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @post.user %>
+  <%=  @post.user.name %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
