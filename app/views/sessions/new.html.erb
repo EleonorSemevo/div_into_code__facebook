@@ -1,0 +1,18 @@
+<h3>Se connecter</h3>
+<% flash.each do |key, value| %>
+  <%= content_tag(:div, value, class: "#{key}") %>
+<% end %>
+
+<%= yield %>
+
+<%= form_with(scope: :session, url: sessions_path, local: true) do |form| %>
+  <%= form.label :email %>
+  <%= form.email_field :email %>
+
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+<p>
+  <%= form.submit 'Se connecter' %>
+
+</p>
+<% end %>
