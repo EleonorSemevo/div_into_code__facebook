@@ -1,3 +1,85 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form_field{
+  color: blue;
+}
+.field{
+  //display: table-cell;
+}
+
+.form-size{
+  width: 30%;
+
+  justify-content: center;
+  margin: auto;
+
+  padding: 0.5%;
+  background-color: white;
+  border-radius: 10px;
+  elevation: higher;
+}
+
+.enregistrer{
+  width: 100%;
+}
+
+body{
+  background-color: #ECF3FF;
+          //#f7f7f5;
+}
+.centrer-element{
+  text-align: center;
+}
+
+.centrer-element a, .link a {
+  color: blue;
+}
+
+.centrer-element a:hover{
+  background-color: #337ab7;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+}
+.link a:hover{
+  text-decoration: none;
+  background-color: #337ab7;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+}
+.left-links{
+  display: flex;
+  align-items: center;
+  float: left;
+}
+
+.center-links{
+  display: flex;
+  align-items: center;
+  float: left;
+
+}
+
+.rigth-links{
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  direction: ltr;
+  float: right;
+}
+
+.links-groups{
+
+}
+
+.header{
+  background-color: white;
+  
+}
+
+
+
+
