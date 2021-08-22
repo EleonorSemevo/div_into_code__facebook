@@ -43,43 +43,27 @@ body{
   padding: 5px;
   margin: 5px;
 }
-.link a:hover{
-  text-decoration: none;
+
+
+.new-post{
+  width: 50%;
+}
+.account-button{
+  padding: 20px;
+  font-size: 1.5rem;
+  color: blue;
+  margin: 1rem;
+
+}
+
+.account-button:hover{
   background-color: #337ab7;
   color: white;
-  padding: 5px;
-  margin: 5px;
-}
-.left-links{
-  display: flex;
-  align-items: center;
-  float: left;
-}
-
-.center-links{
-  display: flex;
-  align-items: center;
-  float: left;
+  border-radius: 10px;
+  text-decoration: none;
 
 }
 
-.rigth-links{
-  display: flex;
-  align-items: flex-end;
-  flex-direction: row;
-  direction: ltr;
-  float: right;
+.confirm-div{
+  margin-top: 2rem;
 }
-
-.links-groups{
-
-}
-
-.header{
-  background-color: white;
-  
-}
-
-
-
-

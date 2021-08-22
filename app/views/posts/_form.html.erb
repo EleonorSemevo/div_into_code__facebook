@@ -11,17 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
+ <div class="new-post">
+   <div class="field">
+     <%= form.label :content %>
+     <%= form.text_area :content, class: "form_field form-control" %>
+   </div>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-  </div>
+   <div class="field">
+     <%= form.label :image %>
+     <%= form.file_field :image,  class: "btn btn-success" %>
+   </div>
 
-  <div class="actions">
-    <%= form.submit  'Envoyer post'%>
-  </div>
+   <div class="actions">
+     <%= form.submit  'Enrégistrer post', class: "btn btn-primary enregistrer"%>
+   </div>
+ </div>
 <% end %>
