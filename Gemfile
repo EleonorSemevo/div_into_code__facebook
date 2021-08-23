@@ -36,3 +36,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
 gem 'mimemagic', '0.3.7'
+
+gem 'rails_12factor', group: :production
