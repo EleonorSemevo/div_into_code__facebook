@@ -2,8 +2,8 @@
 <div>
 
   <% @posts.each do |post| %>
-    <p>
-      <%= post.user.name %>
+    <p class="badge bg-secondary" style="margin-top: 5px;">
+     User: <%= post.user.name %>
     </p>
     <p style="text-align: justify;">
       <%= post.content %>
