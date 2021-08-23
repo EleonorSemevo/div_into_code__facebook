@@ -10,7 +10,7 @@
 }
 
 .form-size{
-  width: 30%;
+  width: 80%;
 
   justify-content: center;
   margin: auto;
@@ -66,4 +66,44 @@ body{
 
 .confirm-div{
   margin-top: 2rem;
+}
+
+ul{
+  width: 100%;
+}
+
+body{
+  margin: 0;
+}
+div{
+  padding: 0;
+}
+
+.main-header{
+  padding: 0;
+  margin: 0;
+}
+.facebbok{
+  width: 40px;
+}
+
+footer {
+  background-color: wheat;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: table;
+}
+
+footer p {
+  display: table-cell;
+  font-size: 1rem;
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.principal{
+  margin-bottom: 100px;
 }
