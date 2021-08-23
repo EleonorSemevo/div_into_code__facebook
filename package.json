@@ -1,5 +1,7 @@
 {
   "name": "social_app",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^5.1.0"
+  }
 }
