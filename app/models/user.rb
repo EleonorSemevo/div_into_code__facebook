@@ -7,6 +7,7 @@ class User < ApplicationRecord
   validates :profile_image, presence: true
   has_many :posts
   has_many :favorites, dependent:  :destroy
+  has_many :favorites_posts, through:  :favorites, source: :post
   has_secure_password
 
 end

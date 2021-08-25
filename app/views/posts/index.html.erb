@@ -1,29 +1,36 @@
 <h1>Posts</h1>
 <div>
 
+
+
   <% @posts.each do |post| %>
-    <p class="badge bg-secondary" style="margin-top: 5px;">
-     User: <%= post.user.name %>
-    </p>
-    <p style="text-align: justify;">
-      <%= post.content %>
-    </p>
-    <p>
+
+    <div class="card" style="width: 100%;">
+      <p class="badge bg-secondary" style="margin-top: 5px;">
+        User: <%= post.user.name %>
+      </p>
       <%= image_tag post.image.url if post.image.url %>
-    </p>
-    <% if current_user.id == post.user_id %>
-      <%= link_to 'Show', post, class: "btn btn-info", style: "color: white;" %>
-      <%= link_to 'Edit', edit_post_path(post), class: "btn btn-primary" %>
-      <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", style: "color: white;" %>
-    <% else%>
-      <%if is_favorite?(post.id, current_user)  %>
-        <%= link_to ' Retirer aux favoris', favorite_path(id: @favorites.find_by(post_id: post.id)), method: :delete,class: 'btn tbn primary' %>
-        <p>Retirer des favoris</p>
-      <% else %>
-        <%= link_to ' Ajouter aux favoris ', favorites_path(post_id: post.id), method: :post, class: 'btn tbn primary' %>
-        <p>Ajouter aux favoris</p>
-      <% end %>
-    <% end %>
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"><%= post.content %></p>
+        <%if is_favorite?(post.id, current_user)  %>
+          <%= link_to ' Add to favaorites', favorite_path(id: @favorites.find_by(post_id: post.id)), method: :delete,class: 'btn btn-primary' %>
+
+        <% else %>
+          <%= link_to ' Delete from favorites ', favorites_path(post_id: post.id), method: :post, class: 'btn btn-danger' %>
+
+        <% end %>
+        <% if current_user.id == post.user_id %>
+          <%= link_to 'Show', post, class: "btn btn-info", style: "color: white;" %>
+          <%= link_to 'Edit', edit_post_path(post), class: "btn btn-primary" %>
+          <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", style: "color: white;" %>
+
+        <% end %>
+      </div>
+
+    </div>
+
+
   <%end %>
 
 
