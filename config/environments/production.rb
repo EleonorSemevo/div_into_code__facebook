@@ -3,6 +3,20 @@ Rails.application.configure do
 
   # Code is not reloaded between requests.
   config.cache_classes = true
+  config.action_mailer.default_url_options = { host: 'https://peaceful-atoll-18348.herokuapp.com' }
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.perform_deliveries = true
+  ActionMailer::Base.raise_delivery_errors = true
+  ActionMailer::Base.smtp_settings =
+    {
+
+      :address            => 'smtp.gmail.com',
+      :port               => 587,
+      :domain             => 'gmail.com', #you can also use google.com
+      :authentication     => :plain,
+      :user_name          => 'eleonorsemevo@gmail.com',
+      :password           => '@misericorde123#'
+    }
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
