@@ -5,7 +5,7 @@
 
   <% @posts.each do |post| %>
 
-    <div class="card" style="width: 100%;">
+    <div class="card" style="width: 100%; margin-bottom: 1rem;">
       <p class="badge bg-secondary" style="margin-top: 5px;">
         User: <%= post.user.name %>
       </p>
@@ -14,7 +14,7 @@
         <h5 class="card-title"></h5>
         <p class="card-text"><%= post.content %></p>
         <%if is_favorite?(post.id, current_user)  %>
-          <%= link_to ' Add to favaorites', favorite_path(id: @favorites.find_by(post_id: post.id)), method: :delete,class: 'btn btn-primary' %>
+          <%= link_to ' Add to favorites', favorite_path(id: @favorites.find_by(post_id: post.id)), method: :delete,class: 'btn btn-primary' %>
 
         <% else %>
           <%= link_to ' Delete from favorites ', favorites_path(post_id: post.id), method: :post, class: 'btn btn-danger' %>
