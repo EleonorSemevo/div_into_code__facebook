@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get "/", to: "posts#index"
+  mount LetterOpenerWeb::Engine, at: '/inbox' if Rails.env.development?
   resources :posts do
     collection do
       post :confirm
