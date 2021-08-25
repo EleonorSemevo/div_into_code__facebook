@@ -13,7 +13,7 @@
 
 <p>
   <strong>Image de profil:</strong>
-  <%= image_tag(@user.profile_image.url) %>
+  <%= image_tag(@user.profile_image.url) if @user.profile_image.url.present?%>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
