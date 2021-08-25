@@ -12,7 +12,7 @@ default: &default
 
 development:
   adapter: postgresql
-  database: my_database_development
+  database: my_insta_appli_development
   pool: 5
   timeout: 5000
 
@@ -21,12 +21,12 @@ development:
 # Do not set this db to the same as development or production.
 test:
   adapter: postgresql
-  database: my_database_development
+  database: my_insta_appli_test
   pool: 5
   timeout: 5000
 
 production:
   adapter: postgresql
-  database: my_database_development
+  database: my_insta_appli_production
   pool: 5
   timeout: 5000

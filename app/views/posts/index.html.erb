@@ -15,8 +15,17 @@
       <%= link_to 'Show', post, class: "btn btn-info", style: "color: white;" %>
       <%= link_to 'Edit', edit_post_path(post), class: "btn btn-primary" %>
       <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", style: "color: white;" %>
+    <% else%>
+      <%if is_favorite?(post.id, current_user)  %>
+        <%= link_to ' Retirer aux favoris', favorite_path(id: @favorites.find_by(post_id: post.id)), method: :delete,class: 'btn tbn primary' %>
+        <p>Retirer des favoris</p>
+      <% else %>
+        <%= link_to ' Ajouter aux favoris ', favorites_path(post_id: post.id), method: :post, class: 'btn tbn primary' %>
+        <p>Ajouter aux favoris</p>
+      <% end %>
     <% end %>
   <%end %>
+
 
   <div style="margin-top: 1.5rem;">
     <%= link_to 'New Post', new_post_path, class: "btn btn-success", style: "color: white;" %>
