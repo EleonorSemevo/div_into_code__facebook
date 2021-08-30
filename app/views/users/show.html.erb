@@ -1,16 +1,13 @@
   <h2  style="margin-top: 5rem;">My profile</h2>
 <p>
-
   <strong>Name:</strong>
   <%= @user.name %>
 <p>nothing?</p>
 </p>
-
 <p>
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
-
 <p>
   <strong>Image de profil:</strong>
   <%= image_tag(@user.profile_image.url) if @user.profile_image.url.present?%>
