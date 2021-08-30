@@ -4,7 +4,7 @@
 </p>
 <p>
   <strong>Image:</strong>
-  <%= image_tag @post.image.url if @post.image.url %>
+  <%= image_tag(@post.image.url, width: '100%', heigth: '40%') if @post.image.url %>
 </p>
 <p>
   <strong>User:</strong>
