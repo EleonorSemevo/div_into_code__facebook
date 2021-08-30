@@ -12,4 +12,6 @@ module SessionsHelper
     flash[:notice] = 'logged out'
     redirect_to new_session_path
   end
+
+
 end

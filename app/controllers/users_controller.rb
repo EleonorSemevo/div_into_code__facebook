@@ -8,6 +8,9 @@ class UsersController < ApplicationController
     @user = User.new
   end
   def edit
+    if current_user.id != @user.id
+      raise ActionController::RoutingError.new('Forbidden')
+    end
   end
   def create
     @user = User.new(user_params)
