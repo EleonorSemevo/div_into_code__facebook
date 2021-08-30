@@ -1,0 +1,16 @@
+fr:
+  activerecord:
+    models:
+      post: post
+      user: utilisateur
+    attributes:
+      post:
+        image: image
+        content: contenu
+      user:
+        name: nom
+        email: mail
+        current_password: mots de passe actuel
+        password: mots de passe
+        password_confirmation: confirmation de mots de passe
+        remember_me: se rappeler de moi
